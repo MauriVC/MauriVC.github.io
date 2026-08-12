@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ============ Paleta estilo OpenCode (monocromo cálido + acento amarillo) ============ */
+:root {
+  --bg: hsl(0, 20%, 99%);
+  --bg-weak: hsl(0, 8%, 97%);
+  --bg-weak-hover: hsl(0, 8%, 94%);
+  --bg-strong: hsl(0, 5%, 12%);
+  --line: hsl(30, 2%, 81%);
+  --line-weak: hsla(0, 100%, 3%, 0.12);
+  --ink: hsl(0, 5%, 12%);
+  --muted: hsl(0, 1%, 39%);
+  --muted-2: hsl(0, 1%, 60%);
+  --accent: hsl(62, 84%, 88%);
+  --accent-weak: hsl(64, 74%, 95%);
+  --accent-ink: hsl(0, 5%, 12%);
+  --accent-strong: hsl(55, 42%, 30%);
+  --ok: hsl(138, 33%, 38%);
+  color-scheme: light;
+}
+
+.dark {
+  --bg: hsl(0, 9%, 7%);
+  --bg-weak: hsl(0, 6%, 10%);
+  --bg-weak-hover: hsl(0, 6%, 15%);
+  --bg-strong: hsl(0, 15%, 94%);
+  --line: hsl(0, 3%, 28%);
+  --line-weak: hsl(0, 4%, 23%);
+  --ink: hsl(0, 15%, 94%);
+  --muted: hsl(0, 4%, 71%);
+  --muted-2: hsl(0, 2%, 49%);
+  --accent: hsl(62, 100%, 90%);
+  --accent-weak: hsl(60, 20%, 8%);
+  --accent-ink: hsl(0, 5%, 12%);
+  --accent-strong: hsl(62, 100%, 78%);
+  --ok: hsl(138, 45%, 65%);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-panel: var(--bg-weak);
+  --color-panel-hover: var(--bg-weak-hover);
+  --color-strong: var(--bg-strong);
+  --color-line: var(--line);
+  --color-line-weak: var(--line-weak);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-muted-2: var(--muted-2);
+  --color-accent: var(--accent);
+  --color-accent-weak: var(--accent-weak);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-strong: var(--accent-strong);
+  --color-ok: var(--ok);
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  @apply bg-bg font-sans text-muted antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Selección estilo marcador */
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+/* ============ Scrollbar ============ */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-2);
+}
+
+/* ============ Resaltado tipo marcador ============ */
+.hl {
+  background-color: var(--accent);
+  color: var(--accent-ink);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* ============ Cursor parpadeante de terminal ============ */
+@keyframes blink {
+  50% { opacity: 0; }
+}
+.caret {
+  display: inline-block;
+  width: 0.55em;
+  height: 1.05em;
+  margin-left: 0.12em;
+  vertical-align: text-bottom;
+  background: var(--accent);
+  animation: blink 1.1s step-end infinite;
+}
+
+/* ============ Scanlines sutiles para ventanas ============ */
+.scanlines {
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.025) 0 1px,
+    transparent 1px 3px
+  );
+}
+.dark .scanlines {
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.02) 0 1px,
+    transparent 1px 3px
+  );
+}
+
+/* ============ Pulso del indicador de estado ============ */
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+.animate-pulse-dot {
+  animation: pulse-dot 1.6s ease-in-out infinite;
+}
+
+/* ============ Reveal al hacer scroll ============ */
+.reveal {
+  opacity: 0;
+  transform: var(--reveal-transform, translateY(24px));
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+  will-change: opacity, transform;
+}
+.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ============ Iconos de habilidades: gris -> color al hover ============ */
+.skill-icon {
+  filter: grayscale(1);
+  opacity: 0.85;
+  transition:
+    filter 0.25s ease,
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+.dark .skill-icon {
+  filter: grayscale(1) brightness(1.9);
+  opacity: 0.9;
+}
+.skill-row:hover .skill-icon,
+.skill-icon:hover {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.2);
+}
+.dark .skill-icon--invert:hover {
+  filter: invert(1);
+  opacity: 1;
+}
+
+/* ============ Accesibilidad: reducir movimiento ============ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001s !important;
+  }
+}
