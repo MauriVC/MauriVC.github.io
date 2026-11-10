@@ -210,7 +210,7 @@ export const skillGroups = [
       { name: 'GitHub', icon: '/skills/github.svg', mono: true },
       { name: 'Electron', icon: '/skills/electron.svg' },
       { name: 'Vite', icon: '/skills/vite.svg' },
-      { name: 'Azure (Functions / SWA)', icon: '/skills/azure.svg' },
+      { name: 'Azure Functions / Static Web Apps', icon: '/skills/azure.svg' },
       { name: 'WordPress (temas y plugins)', icon: '/skills/wordpress.svg' },
       { name: 'Microsoft Office Avanzado' },
       { name: 'Soporte y Mant. de Hardware' },
