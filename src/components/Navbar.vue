@@ -5,12 +5,11 @@ import { personal } from '../data/portfolio'
 
 const links = [
   { id: 'hero', label: 'inicio' },
-  { id: 'proyectos', label: 'proyectos' },
   { id: 'sobre-mi', label: 'sobre-mi' },
-  { id: 'habilidades', label: 'habilidades' },
   { id: 'experiencia', label: 'experiencia' },
+  { id: 'proyectos', label: 'proyectos' },
+  { id: 'habilidades', label: 'habilidades' },
   { id: 'educacion', label: 'educacion' },
-  { id: 'certificaciones', label: 'certificaciones' },
   { id: 'contacto', label: 'contacto' },
 ]
 
