@@ -8,9 +8,8 @@ import { skillGroups } from '../data/portfolio'
   <section id="habilidades" class="scroll-mt-24 py-20 md:py-24">
     <div class="mx-auto max-w-6xl px-5 md:px-6">
       <SectionHeading
-        eyebrow="tree ~/habilidades"
-        title="Habilidades"
-        subtitle="Stack técnico ordenado por directorios."
+        eyebrow="tree ~/stack"
+        title="Stack técnico"
         icon="terminal"
       />
 

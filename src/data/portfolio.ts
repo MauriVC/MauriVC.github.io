@@ -209,7 +209,6 @@ export const skillGroups = [
       { name: 'Git', icon: '/skills/git.svg' },
       { name: 'GitHub', icon: '/skills/github.svg', mono: true },
       { name: 'Electron', icon: '/skills/electron.svg' },
-      { name: 'Docker', icon: '/skills/docker.svg' },
       { name: 'Vite', icon: '/skills/vite.svg' },
       { name: 'Azure (Functions / SWA)', icon: '/skills/azure.svg' },
       { name: 'WordPress (temas y plugins)', icon: '/skills/wordpress.svg' },

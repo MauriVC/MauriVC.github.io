@@ -8,7 +8,7 @@ const links = [
   { id: 'sobre-mi', label: 'sobre-mi' },
   { id: 'experiencia', label: 'experiencia' },
   { id: 'proyectos', label: 'proyectos' },
-  { id: 'habilidades', label: 'habilidades' },
+  { id: 'habilidades', label: 'stack' },
   { id: 'educacion', label: 'educacion' },
   { id: 'contacto', label: 'contacto' },
 ]
