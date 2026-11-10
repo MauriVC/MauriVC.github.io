@@ -17,7 +17,7 @@ import { personal } from '../data/portfolio'
       <div class="lg:order-1">
         <div v-reveal="{ dir: 'up' }" class="inline-flex items-center gap-2 border border-line bg-panel px-3 py-1.5 font-mono text-xs text-muted">
           <span class="h-2 w-2 rounded-full bg-ok animate-pulse-dot" />
-          <span class="text-muted-2">$</span> status: <span class="text-ink">disponible</span>
+          <span class="text-muted-2">$</span> status: <span class="text-ink">disponible</span> <span class="text-muted-2">·</span> <span class="text-ink">full stack</span>
         </div>
 
         <p v-reveal="{ dir: 'up', delay: 60 }" class="mt-6 font-mono text-sm text-muted-2">
@@ -119,7 +119,7 @@ import { personal } from '../data/portfolio'
               </p>
               <p class="flex items-center gap-2 pl-4 text-ok">
                 <span class="h-2 w-2 rounded-full bg-ok animate-pulse-dot" />
-                abierto a nuevas oportunidades
+                abierto a oportunidades full stack
                 <span class="caret" />
               </p>
             </div>

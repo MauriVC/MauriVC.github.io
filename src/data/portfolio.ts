@@ -10,7 +10,7 @@ export const personal = {
     'Desarrollador Full Stack',
     'Asistente de Desarrollo y Programación',
   ],
-  headline: 'Ingeniero de Sistemas & Desarrollador de Software',
+  headline: 'Ingeniero de Sistemas & Desarrollador Full Stack',
   tagline:
     'Diseño y construyo aplicaciones web modernas, funcionales y escalables con foco en la experiencia de usuario.',
   location: 'Santa Cruz de la Sierra, Bolivia',
@@ -26,7 +26,7 @@ export const personal = {
 
 export const about = {
   paragraphs: [
-    'Ingeniero de Sistemas egresado de la Escuela Militar de Ingeniería (EMI) con experiencia en el desarrollo de soluciones web utilizando Laravel, React y bases de datos relacionales como MySQL y SQL Server.',
+    'Ingeniero de Sistemas egresado de la Escuela Militar de Ingeniería (EMI) con experiencia en el desarrollo de soluciones web utilizando Laravel, React, Vue y Node.js, con bases de datos relacionales como MySQL y SQL Server.',
     'Cuento con habilidades prácticas consolidadas en el mantenimiento preventivo y correctivo de hardware, así como en soporte técnico a usuarios finales. Profesional proactivo, con capacidad de adaptación y aprendizaje, enfocado en la resolución de problemas complejos y en la gestión de software corporativo y herramientas de ofimática.',
   ],
   quickFacts: [
