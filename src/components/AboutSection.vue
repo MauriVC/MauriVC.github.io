@@ -61,6 +61,15 @@ import { about } from '../data/portfolio'
                   </dd>
                 </div>
               </dl>
+
+              <div class="mt-4 border-t border-line-weak pt-3">
+                <p class="text-xs text-muted-2">$ cat ~/idiomas.json</p>
+                <div class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs">
+                  <span v-for="lang in about.languages" :key="lang.name" class="text-muted">
+                    <span class="text-ink">{{ lang.name }}</span>: {{ lang.level }}
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

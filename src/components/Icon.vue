@@ -40,6 +40,7 @@ const icons: Record<string, IconDef> = {
   'arrow-right': { filled: false, paths: ['M5 12h14M12 5l7 7-7 7'] },
   'arrow-up': { filled: false, paths: ['M12 19V5M5 12l7-7 7 7'] },
   'external-link': { filled: false, paths: ['M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'] },
+  lock: { filled: false, paths: ['M5 11h14v10H5V11Z', 'M8 11V7a4 4 0 0 1 8 0v4'] },
   download: { filled: false, paths: ['M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3'] },
   mail: {
     filled: false,

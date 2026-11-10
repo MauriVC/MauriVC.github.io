@@ -56,6 +56,10 @@ import { projects } from '../data/portfolio'
             </div>
 
             <div class="mt-5 flex items-center gap-3 border-t border-line-weak pt-4">
+              <span v-if="project.private" class="inline-flex items-center gap-1.5 font-mono text-xs text-muted-2">
+                <Icon name="lock" class="h-3.5 w-3.5" />
+                repositorio privado
+              </span>
               <a
                 v-if="project.github"
                 :href="project.github"

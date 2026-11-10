@@ -1,5 +1,51 @@
-# Vue 3 + TypeScript + Vite
+# Portafolio — Carlos Mauricio Viveros Claure
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Portafolio personal con estética de terminal: una sola página que resume mi perfil,
+experiencia, proyectos, habilidades, formación y canales de contacto.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+**Sitio en vivo:** https://maurivc.github.io/
+
+## Stack
+
+- **Vue 3** + TypeScript (`<script setup>`)
+- **Vite**
+- **Tailwind CSS v4**
+- Directiva propia de animaciones al hacer scroll (`v-reveal`)
+- Tema claro/oscuro persistido en `localStorage`
+
+## Desarrollo
+
+```bash
+npm install
+npm run dev
+```
+
+Abre `http://localhost:5173/`.
+
+## Build de producción
+
+```bash
+npm run build
+npm run preview
+```
+
+El resultado se genera en `dist/`.
+
+## Estructura
+
+```
+src/
+  components/   Secciones y componentes de UI
+  data/         Contenido del portafolio (perfil, proyectos, skills...)
+  directives/   Directiva v-reveal
+  style.css     Tokens de diseño y estilos globales
+public/         CV, favicon, iconos locales
+```
+
+Todo el contenido editable vive en `src/data/portfolio.ts`.
+
+## Despliegue
+
+El sitio se publica en **GitHub Pages** mediante GitHub Actions
+(`.github/workflows/deploy.yml`). Cada push a `main` compila y despliega
+automáticamente en https://maurivc.github.io/.
